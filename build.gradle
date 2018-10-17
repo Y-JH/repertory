@@ -21,3 +21,15 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+//功能配置处理
+ext {
+    compileSdk = 25
+    minSdk = 21
+    targetSdk = 25
+    // 用了25.0.3发现专题界面的浮标按钮没有动画效果了。改回25.0.1
+    // support = "25.0.3"
+    support = "25.+"
+    buildTools = "25.0.3"
+}
