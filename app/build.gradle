@@ -1,4 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'org.greenrobot.greendao'
 
 android {
     compileSdkVersion rootProject.ext.compileSdk
@@ -24,6 +26,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+
+    //support lib
     compile "com.android.support:appcompat-v7:${rootProject.ext.support}"
     compile "com.android.support:support-v4:${rootProject.ext.support}"
     compile "com.android.support:recyclerview-v7:${rootProject.ext.support}"
@@ -31,4 +35,24 @@ dependencies {
     compile "com.android.support:design:${rootProject.ext.support}"
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+
+    //rxjava
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.yanzhenjie:permission:1.0.5'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.5'
+    //ConverterFactory的String依赖包
+    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    //ConverterFactory的Gson依赖包
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    //CallAdapterFactory的Rx依赖包
+    compile 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.1@aar'
+    // dagger
+    apt 'com.google.dagger:dagger-compiler:2.6'
+    compile 'com.google.dagger:dagger:2.6'
+    // greendao
+    compile 'org.greenrobot:greendao:3.1.0'
 }
