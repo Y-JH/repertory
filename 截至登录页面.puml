@@ -1,0 +1,25 @@
+@startuml
+hide footbox
+title 截至登录页面逻辑
+actor "李隆基" as Y #red
+control "仓库管理客户端" as A #red
+
+
+Y->A : 启 动
+activate A #red
+note over A :  第一次登录有欢迎页
+note over A :  每次登录有启动页
+A->A : 检测本地登录信息
+
+alt 有本地记录
+    A->"仓库管理首页" as H :直接进入app首页
+else 无本地记录
+    A->"登录页面" as L : 跳转到登录页面
+    deactivate A
+    activate L #red
+    L -> L : 输入登录信息
+    note over L : 完成登录
+    L->H : 跳转到app首页
+end
+    deactivate L
+@enduml
