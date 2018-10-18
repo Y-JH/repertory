@@ -69,4 +69,9 @@ dependencies {
     compile 'org.greenrobot:greendao:3.1.0'
     //logger
     compile 'com.orhanobut:logger:1.8'
+    //fragmentation
+    compile 'me.yokeyword:fragmentation:1.2.0'
+    compile 'me.yokeyword:fragmentation-swipeback:1.2.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'me.yokeyword:eventbus-activity-scope:1.1.0'
 }
