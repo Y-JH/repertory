@@ -1,8 +1,8 @@
-package com.repertory.xingyao.view.home;
+package com.repertory.xingyao.view.baseimpl;
 
 /**
  * @Title:IHomeView
- * @Package:com.repertory.xingyao.view.home
+ * @Package:com.repertory.xingyao.view.baseimpl
  * @Description: 该接口是对 HomeActivity 的 View 进行操作的抽象分层；P层执行，V层实现；
  * @Auther:YJH
  * @Email:yuannunhua@gmail.com

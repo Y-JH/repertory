@@ -7,6 +7,7 @@ import com.repertory.xingyao.inject.component.DaggerHomeComponent;
 import com.repertory.xingyao.inject.module.HomeModule;
 import com.repertory.xingyao.presenter.home.HomePresenter;
 import com.repertory.xingyao.view.base.BaseActivity;
+import com.repertory.xingyao.view.baseimpl.IHomeView;
 
 /**
  * @Title:HomeActivity
@@ -16,12 +17,13 @@ import com.repertory.xingyao.view.base.BaseActivity;
  * @Email:yuannunhua@gmail.com
  * @Date:2018/10/1811:40
  */
-public class HomeActivity extends BaseActivity<HomePresenter> implements IHomeView{
+public class HomeActivity extends BaseActivity<HomePresenter> implements IHomeView {
 
     private TextView textView;
 
     @Override
     protected void initInjector() {
+        //注入presenter实例
         DaggerHomeComponent.builder()
                 .homeModule(new HomeModule(this))
                 .build().inject(this);

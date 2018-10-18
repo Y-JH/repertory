@@ -1,9 +1,8 @@
 package com.repertory.xingyao.inject.module;
 
+import com.repertory.xingyao.inject.PerActivity;
 import com.repertory.xingyao.presenter.home.HomePresenter;
 import com.repertory.xingyao.view.home.HomeActivity;
-
-import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
@@ -19,13 +18,19 @@ import dagger.Provides;
 
 @Module
 public class HomeModule {
-    private final HomeActivity mHomeActivity;
+    private final HomeActivity mHomeActivity;//为P层提供HomeActivity引用，业务逻辑使用上层抽象接口的交互；
 
     public HomeModule(HomeActivity homeActivity){
         mHomeActivity = homeActivity;
     }
 
-    @Singleton
+
+    /**
+     * 提供P层实例
+     * @return
+     */
+//    @Singleton
+    @PerActivity
     @Provides
     public HomePresenter provideHomePresenter(){
         return new HomePresenter(mHomeActivity);

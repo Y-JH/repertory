@@ -1,9 +1,8 @@
 package com.repertory.xingyao.inject.component;
 
+import com.repertory.xingyao.inject.PerActivity;
 import com.repertory.xingyao.inject.module.HomeModule;
 import com.repertory.xingyao.view.home.HomeActivity;
-
-import javax.inject.Singleton;
 
 import dagger.Component;
 
@@ -15,7 +14,8 @@ import dagger.Component;
  * @Email:yuannunhua@gmail.com
  * @Date:2018/10/1813:58
  */
-@Singleton
+//@Singleton
+@PerActivity
 @Component(modules = HomeModule.class)
 public interface HomeComponent {
 

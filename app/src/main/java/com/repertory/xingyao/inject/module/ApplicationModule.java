@@ -3,8 +3,7 @@ package com.repertory.xingyao.inject.module;
 import android.content.Context;
 
 import com.repertory.xingyao.AndroidApplication;
-
-import javax.inject.Singleton;
+import com.repertory.xingyao.inject.PerActivity;
 
 import dagger.Module;
 import dagger.Provides;
@@ -25,7 +24,8 @@ public class ApplicationModule {
     }
 
 
-    @Singleton
+//    @Singleton
+    @PerActivity
     @Provides
     Context provideApplicationContext(){
         return mApplication.getApplication();
