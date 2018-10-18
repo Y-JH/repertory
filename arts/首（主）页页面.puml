@@ -1,0 +1,15 @@
+@startuml
+hide footbox
+title 首页页面逻辑
+actor "李隆基" as Y #red
+control "仓库管理客户端" as A #red
+
+
+Y->A : 启 动
+note over A :  第一次登录进入登录页面（需要输入店名+授权码）
+note over A :  保存店名
+note over A :  登录成功进入首页
+
+A->"仓库管理首页" as H :进入当前app首页<逻辑的开端>
+note over H :  店名+设置+viewpagerIndicator产品类+搜索+对应类型列表
+@enduml
