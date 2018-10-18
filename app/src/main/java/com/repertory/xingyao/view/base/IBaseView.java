@@ -1,11 +1,14 @@
-package com.repertory.xingyao.module.base;
+package com.repertory.xingyao.view.base;
+
+
+import com.trello.rxlifecycle2.LifecycleTransformer;
 
 /**
  * @Title:IBaseView
  * @Package:com.repertory.xingyao.module.base
- * @Description:
+ * @Description:  MVP 架构中的  层 抽象层
  * @Auther:YJH
- * @Email:yuannunhua@gmail.com
+ * @Email:yuannunhua@gmail.comV
  * @Date:2018/10/1720:13
  */
 public interface IBaseView {
@@ -18,5 +21,5 @@ public interface IBaseView {
 
     void finishRefresh();//完成页面的数据的刷新
 
-
+    <T> LifecycleTransformer<T> bindToLife();//绑定生命周期
 }

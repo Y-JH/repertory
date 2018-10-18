@@ -19,6 +19,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    //处理bug：Error:Conflict with dependency 'com.google.code.findbugs:jsr305' in project ':app'.
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
 }
 
 dependencies {
@@ -43,6 +48,13 @@ dependencies {
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'io.reactivex.rxjava2:rxjava:2.1.5'
+
+    compile 'com.trello.rxlifecycle2:rxlifecycle:2.0'
+    // If you want to bind to Android-specific lifecycles
+    compile 'com.trello.rxlifecycle2:rxlifecycle-android:2.0'
+    // If you want pre-written Activities and Fragments you can subclass as providers
+    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.0'
+
     //ConverterFactory的String依赖包
     compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
     //ConverterFactory的Gson依赖包
@@ -55,4 +67,6 @@ dependencies {
     compile 'com.google.dagger:dagger:2.6'
     // greendao
     compile 'org.greenrobot:greendao:3.1.0'
+    //logger
+    compile 'com.orhanobut:logger:1.8'
 }
