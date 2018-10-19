@@ -1,7 +1,7 @@
 package com.repertory.xingyao.presenter.item;
 
 import com.repertory.xingyao.presenter.base.IBasePresenter;
-import com.repertory.xingyao.view.home.ItemDetailActivity;
+import com.repertory.xingyao.view.aty.ItemDetailActivity;
 
 /**
  * @Title:ItemDetailPresenter

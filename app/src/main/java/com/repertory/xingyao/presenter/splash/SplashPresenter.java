@@ -1,7 +1,7 @@
 package com.repertory.xingyao.presenter.splash;
 
 import com.repertory.xingyao.presenter.base.IBasePresenter;
-import com.repertory.xingyao.view.home.SplashActivity;
+import com.repertory.xingyao.view.aty.SplashActivity;
 
 /**
  * @Title:SplashPresenter

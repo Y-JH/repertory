@@ -2,7 +2,7 @@ package com.repertory.xingyao.inject.component;
 
 import com.repertory.xingyao.inject.PerActivity;
 import com.repertory.xingyao.inject.module.ItemDetailModule;
-import com.repertory.xingyao.view.home.ItemDetailActivity;
+import com.repertory.xingyao.view.aty.ItemDetailActivity;
 
 import dagger.Component;
 

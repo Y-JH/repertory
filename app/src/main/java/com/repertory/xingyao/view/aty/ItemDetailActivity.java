@@ -1,4 +1,4 @@
-package com.repertory.xingyao.view.home;
+package com.repertory.xingyao.view.aty;
 
 import com.repertory.xingyao.R;
 import com.repertory.xingyao.inject.component.DaggerItemDetailComponent;

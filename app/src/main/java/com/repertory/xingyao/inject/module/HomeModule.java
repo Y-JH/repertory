@@ -2,7 +2,7 @@ package com.repertory.xingyao.inject.module;
 
 import com.repertory.xingyao.inject.PerActivity;
 import com.repertory.xingyao.presenter.home.HomePresenter;
-import com.repertory.xingyao.view.home.HomeActivity;
+import com.repertory.xingyao.view.aty.HomeActivity;
 
 import dagger.Module;
 import dagger.Provides;

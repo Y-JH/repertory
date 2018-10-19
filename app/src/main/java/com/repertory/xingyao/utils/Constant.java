@@ -3,7 +3,7 @@ package com.repertory.xingyao.utils;
 /**
  * @Title:Constant
  * @Package:com.repertory.xingyao.utils
- * @Description:
+ * @Description:静态常量工具
  * @Auther:YJH
  * @Email:yuannunhua@gmail.com
  * @Date:2018/10/1818:07

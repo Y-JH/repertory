@@ -2,7 +2,7 @@ package com.repertory.xingyao.presenter.home;
 
 import com.orhanobut.logger.Logger;
 import com.repertory.xingyao.presenter.base.IBasePresenter;
-import com.repertory.xingyao.view.home.HomeActivity;
+import com.repertory.xingyao.view.aty.HomeActivity;
 
 /**
  * @Title:HomePresenter

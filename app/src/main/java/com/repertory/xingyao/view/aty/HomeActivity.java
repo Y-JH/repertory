@@ -1,4 +1,4 @@
-package com.repertory.xingyao.view.home;
+package com.repertory.xingyao.view.aty;
 
 import android.widget.TextView;
 

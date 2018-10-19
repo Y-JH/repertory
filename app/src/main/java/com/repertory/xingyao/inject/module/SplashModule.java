@@ -2,7 +2,7 @@ package com.repertory.xingyao.inject.module;
 
 import com.repertory.xingyao.inject.PerActivity;
 import com.repertory.xingyao.presenter.splash.SplashPresenter;
-import com.repertory.xingyao.view.home.SplashActivity;
+import com.repertory.xingyao.view.aty.SplashActivity;
 
 import dagger.Module;
 import dagger.Provides;

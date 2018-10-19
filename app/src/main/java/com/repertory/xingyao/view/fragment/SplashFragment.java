@@ -9,7 +9,7 @@ import com.repertory.xingyao.utils.Constant;
 import com.repertory.xingyao.utils.RxHelper;
 import com.repertory.xingyao.utils.SharedPreferencesHelper;
 import com.repertory.xingyao.view.base.BaseFragmentationFragment;
-import com.repertory.xingyao.view.home.HomeActivity;
+import com.repertory.xingyao.view.aty.HomeActivity;
 
 import io.reactivex.Observer;
 import io.reactivex.annotations.NonNull;

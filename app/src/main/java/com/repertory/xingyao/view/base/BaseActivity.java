@@ -10,6 +10,9 @@ import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 import javax.inject.Inject;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 /**
  * @Title:BaseActivity
  * @Package:com.repertory.xingyao.view.base
@@ -20,6 +23,7 @@ import javax.inject.Inject;
  */
 public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompatActivity implements IBaseView  {
 
+    protected Unbinder mUnbinder = null;
     @Inject
     protected T mPresenter;
 
@@ -47,6 +51,7 @@ public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompat
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(attachLayoutRes());
+        mUnbinder = ButterKnife.bind(this);//添加view注解绑定
         initInjector();
         initViews();
         updateViews(false);
@@ -76,5 +81,11 @@ public abstract class BaseActivity<T extends IBasePresenter> extends RxAppCompat
     @Override
     public <T> LifecycleTransformer<T> bindToLife() {
         return this.<T>bindToLifecycle();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mUnbinder.unbind();//注解解除绑定
     }
 }

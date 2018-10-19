@@ -1,4 +1,4 @@
-package com.repertory.xingyao.view.home;
+package com.repertory.xingyao.view.aty;
 
 import com.repertory.xingyao.AndroidApplication;
 import com.repertory.xingyao.R;
